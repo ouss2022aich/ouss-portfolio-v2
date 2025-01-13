@@ -31,6 +31,14 @@ import servicesIcon from './media/icons/services.png'
 import hiIcon from './media/icons/hi.gif'
 
 
+import linkedinIcon from './media/icons/linkedin.png'
+import fiverrIcon from './media/icons/fiverr.png'
+import gmailIcon from './media/icons/gmail.png'
+import whatsappIcon from './media/icons/whatsapp.png'
+import telegramIcon from './media/icons/telegram.png'
+import githubIcon from './media/icons/filled-github.png'
+
+
 
 
 // images 
@@ -145,7 +153,7 @@ function App() {
                     once: true
                   }}
                   className='hero-card flex-1 font-moderniz flex flex-col items-center  text-4xl'>
-                  <img src={ legitIcon} alt="" width={250} height={250} />
+                  <img src={legitIcon} alt="" width={250} height={250} />
                   <h3 className='my-2'> <span className='text-green-600'>85%</span>  Client <br />Satisfaction</h3>
                 </motion.div>
 
@@ -361,12 +369,24 @@ function App() {
                     <p className='text-xl'>Call me : +213 792 333 216</p>
                   </div>
                   <div className='flex justify-end flex-1 gap-6' >
-                    <a href="https://www.linkedin.com/in/oussama-aichaoui/"><img className='hover:scale-110 transition-all duration-150 cursor-pointer' src="/src/media/icons/linkedin.png" alt="" width={45} /></a>
-                    <a href=""><img className='hover:scale-110 transition-all duration-150 cursor-pointer' src="/src/media/icons/fiverr.png" alt="" width={45} /></a>
-                    <a href="mailto:ouss.aich2022@gmail.com"><img className='hover:scale-110 transition-all duration-150 cursor-pointer' src="/src/media/icons/gmail.png" alt="" width={45} /></a>
-                    <a href="https://wa.me/213792333216"><img className='hover:scale-110 transition-all duration-150 cursor-pointer' src="/src/media/icons/whatsapp.png" alt="" width={45} /></a>
-                    <a href="https://t.me/+213792333216"><img className='hover:scale-110 transition-all duration-150 cursor-pointer' src="/src/media/icons/telegram.png" alt="" width={45} /></a>
-                    <a href="https://github.com/ouss2022aich"><img className='hover:scale-110 transition-all duration-150 cursor-pointer' src="/src/media/icons/filled-github.png" alt="" width={45} /></a>
+                    <a href="https://www.linkedin.com/in/oussama-aichaoui/">
+                      <img className='hover:scale-110 transition-all duration-150 cursor-pointer' src={linkedinIcon} alt="" width={45} />
+                    </a>
+                    <a href="">
+                      <img className='hover:scale-110 transition-all duration-150 cursor-pointer' src={fiverrIcon} alt="" width={45} />
+                    </a>
+                    <a href="mailto:ouss.aich2022@gmail.com">
+                      <img className='hover:scale-110 transition-all duration-150 cursor-pointer' src={gmailIcon} alt="" width={45} />
+                    </a>
+                    <a href="https://wa.me/213792333216">
+                      <img className='hover:scale-110 transition-all duration-150 cursor-pointer' src={whatsappIcon} alt="" width={45} />
+                    </a>
+                    <a href="https://t.me/+213792333216">
+                      <img className='hover:scale-110 transition-all duration-150 cursor-pointer' src={telegramIcon} alt="" width={45} />
+                    </a>
+                    <a href="https://github.com/ouss2022aich">
+                      <img className='hover:scale-110 transition-all duration-150 cursor-pointer' src={githubIcon} alt="" width={45} />
+                    </a>
                   </div>
 
                 </div>
