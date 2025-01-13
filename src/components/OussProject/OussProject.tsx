@@ -217,7 +217,7 @@ const OussProject: React.FC<OussProjectProps> = ({ name, descParagraphs, from, t
                         Array(3).fill(0).map((el, i) => {
                             return (
                                 <Tilt key={el} glareEnable={true} glareColor={bg_from} glareMaxOpacity={0.5} >
-                                    <img onClick={() => setModalImg(`/src/media/images/${name}${i + 1}.jpg`)} src={projectImages[i] } className="project-img peer cursor-pointer rounded-2xl  transition-all duration-200 blur-sm  group-hover:blur-0 hover:scale-125 hover:z-[99] relative" alt="" width={500} />
+                                    <img onClick={() => setModalImg( projectImages[i] ) } src={projectImages[i] } className="project-img peer cursor-pointer rounded-2xl  transition-all duration-200 blur-sm  group-hover:blur-0 hover:scale-125 hover:z-[99] relative" alt="" width={500} />
                                 </Tilt>)
                         })
                     }

@@ -21,6 +21,16 @@ import expIcon from './media/icons/exp.png'
 import legitIcon from './media/icons/legit.png'
 import champIcon from './media/icons/champion.png'
 
+import compassIcon from './media/icons/compass.png'
+import handIcon from './media/icons/hand.png'
+import employeeIcon from './media/icons/employee.png'
+import chatIcon from './media/icons/chat.png'
+import profileIcon from './media/icons/profile.png'
+import projectsIcon from './media/icons/projects.png'
+import servicesIcon from './media/icons/services.png'
+import hiIcon from './media/icons/hi.gif'
+
+
 
 
 // images 
@@ -52,14 +62,14 @@ function App() {
   return (
     <>
       <div className='cursor overflow-hidden'>
-        <img src="/src/media/icons/compass.png" alt="" id='compass' className='mix-blend-difference hidden' />
-        <img src="/src/media/icons/hand.png" alt="" id='hand' className=' hidden' />
-        <img src="/src/media/icons/employee.png" alt="" id='employee' className=' hidden' />
-        <img src="/src/media/icons/chat.png" alt="" id='chat' className=' hidden' width={60} />
-        <img src="/src/media/icons/profile.png" alt="" id='profile' className=' hidden' width={80} />
-        <img src="/src/media/icons/projects.png" alt="" id='projects' className=' hidden' width={60} />
-        <img src="/src/media/icons/services.png" alt="" id='services' className=' hidden' width={60} />
-        <img src="/src/media/icons/hi.gif" alt="" id='hi' className=' hidden' width={60} />
+        <img src={compassIcon} alt="" id='compass' className='mix-blend-difference hidden' />
+        <img src={handIcon} alt="" id='hand' className=' hidden' />
+        <img src={employeeIcon} alt="" id='employee' className=' hidden' />
+        <img src={chatIcon} alt="" id='chat' className=' hidden' width={60} />
+        <img src={profileIcon} alt="" id='profile' className=' hidden' width={80} />
+        <img src={projectsIcon} alt="" id='projects' className=' hidden' width={60} />
+        <img src={servicesIcon} alt="" id='services' className=' hidden' width={60} />
+        <img src={hiIcon} alt="" id='hi' className=' hidden' width={60} />
       </div>
       <div className="wrapper bg-black text-white p-3 xs:px-5 sm:px-5 md:px-16 lg:px-24 py-5 relative">
 
