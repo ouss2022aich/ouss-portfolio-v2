@@ -46,7 +46,7 @@ import mypic from './media/images/mypic.png'
 
 // videos 
 import heroVid from './media/images/test2.mp4'
-import { DOMElement, useEffect } from 'react'
+import { useEffect } from 'react'
 
 
 
@@ -116,7 +116,7 @@ function App() {
 
       })
 
-      document.addEventListener('click', e => {
+      document.addEventListener('click', () => {
         cursor.classList.add("expand");
         setTimeout(() => {
           cursor.classList.remove("expand");

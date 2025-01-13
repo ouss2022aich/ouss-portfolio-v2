@@ -3,6 +3,7 @@ import OussNavbar from '../../components/OussNavbar/OussNavbar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import resumeDoc from '../../docs/cv_oussama_2024_en.pdf'
 
 export default function OussNav() {
 
@@ -38,7 +39,7 @@ export default function OussNav() {
         />
 
         <div className='flex flex-1 justify-end items-center gap-5'>
-          <a href="/src/docs/cv_oussama_2024_en.pdf" download={true}>
+          <a href={resumeDoc} download={true}>
             <button className='resume-button group flex justify-evenly border-4 rounded-2xl py-4 px-4 w-40 hover:text-black hover:bg-white transition-all duration-500  font-bakbakone text-sm uppercase  gap-4 '>
               <FontAwesomeIcon icon={faCloudArrowDown} fontSize={20} className='opacity-0 hidden group-hover:opacity-100 group-hover:inline transition-all duration-200 fa-bounce' flip='horizontal' />
               <span>Resume</span>
