@@ -6,6 +6,56 @@ import arrowDown from '/src/media/icons/arrow-down.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons"
 
+// projects images 
+import galaxybenef1 from '../../media/images/galaxybenef1.jpg'
+import galaxybenef2 from '../../media/images/galaxybenef2.jpg'
+import galaxybenef3 from '../../media/images/galaxybenef3.jpg'
+
+
+import click2secure1 from '../../media/images/click2secure1.jpg'
+import click2secure2 from '../../media/images/click2secure2.jpg'
+import click2secure3 from '../../media/images/click2secure3.jpg'
+
+
+import british_school1 from '../../media/images/galaxybenef1.jpg'
+import british_school2 from '../../media/images/galaxybenef2.jpg'
+import british_school3 from '../../media/images/galaxybenef3.jpg'
+
+
+import cimaflix1 from '../../media/images/cimaflix1.jpg'
+import cimaflix2 from '../../media/images/cimaflix2.jpg'
+import cimaflix3 from '../../media/images/cimaflix3.jpg'
+
+const projectImgGroup = [
+
+     {
+        name : 'galaxybenef',
+        images : [
+            galaxybenef1,galaxybenef2,galaxybenef3
+        ]
+     },
+     {
+        name : 'click2secure',
+        images : [
+            click2secure1,click2secure2,click2secure3
+        ]
+     },
+     {
+        name : 'cimaflix',
+        images : [
+            cimaflix1,cimaflix2,cimaflix3
+        ]
+     },
+     {
+        name : 'british school app',
+        images : [
+            british_school1,british_school2,british_school3
+        ]
+     },
+
+
+]
+
 
 const formatDate = (date: Date) => {
 
@@ -38,6 +88,8 @@ const OussProject: React.FC<OussProjectProps> = ({ name, descParagraphs, from, t
 
     const [expand, setExpand] = useState(false)
     const [modalImg, setModalImg] = useState('')
+
+    const projectImages : any = projectImgGroup.find( (el) => el.name === name )?.images
 
     return (
         <div id={name} className={`ouss-project px-8 py-10 flex flex-col gap-4 relative overflow-hidden transition-all duration-700 ${expand ? 'h-full' : 'h-28'} `} style={{ borderRadius: 35, background: `linear-gradient(to right, ${bg_from}, ${bg_to})` }}>
@@ -165,7 +217,7 @@ const OussProject: React.FC<OussProjectProps> = ({ name, descParagraphs, from, t
                         Array(3).fill(0).map((el, i) => {
                             return (
                                 <Tilt key={el} glareEnable={true} glareColor={bg_from} glareMaxOpacity={0.5} >
-                                    <img onClick={() => setModalImg(`/src/media/images/${name}${i + 1}.jpg`)} src={`/src/media/images/${name}${i + 1}.jpg`} className="project-img peer cursor-pointer rounded-2xl  transition-all duration-200 blur-sm  group-hover:blur-0 hover:scale-125 hover:z-[99] relative" alt="" width={500} />
+                                    <img onClick={() => setModalImg(`/src/media/images/${name}${i + 1}.jpg`)} src={projectImages[i] } className="project-img peer cursor-pointer rounded-2xl  transition-all duration-200 blur-sm  group-hover:blur-0 hover:scale-125 hover:z-[99] relative" alt="" width={500} />
                                 </Tilt>)
                         })
                     }
