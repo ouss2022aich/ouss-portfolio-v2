@@ -425,7 +425,7 @@ function App() {
             <OussService imgIndex={3} icon={backendIcon} title='Back-End Development' content='Developing robust, secure, and scalable server-side solutions to power your applications.' />
             <OussService imgIndex={4} icon={apiIcon} title='API Development' content='Creating RESTful and GraphQL APIs for seamless integration with third-party services and systems.' />
             <OussService imgIndex={5} icon={mobileIcon} title='Mobile Application Development' content='Delivering cross-platform mobile applications with sleek designs and smooth functionality using frameworks like Flutter or React Native.' />
-            <OussService imgIndex={6} icon={graphicIcon} title='Graphic Designer & Video Editor' content='Building efficient and high-performance desktop applications for Windows, macOS, and Linux using technologies like Electron, Qt, or .NET.' />
+            <OussService imgIndex={6} icon={graphicIcon} title='Graphic Designer & Video Editor' content='creating reels, posters, logos, and short videos and more in order to bring creative ideas to life and engage your audience.' />
 
 
           </OussSection>
