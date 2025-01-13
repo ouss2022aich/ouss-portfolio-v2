@@ -4,19 +4,27 @@ import OussSection from './components/OussSection/OussSection'
 import OussOutlineTags from './components/OussOutlineTags/OussOutlineTags'
 import OussProject from './components/OussProject/OussProject'
 import OussService from './components/OussService/OussService'
+import { motion } from 'framer-motion'
+import OussForm from './components/OussForm/OussForm'
 
 
-import webIcon from './media/icons/web.png'
-import frontendIcon from './media/icons/frontend.png'
 
+// icons 
 import backendIcon from './media/icons/backend.png'
 import apiIcon from './media/icons/api_w.png'
 import mobileIcon from './media/icons/mobile.png'
 import graphicIcon from './media/icons/graphic.png'
 import OussNav from './components/OussNav/OussNav'
+import webIcon from './media/icons/web.png'
+import frontendIcon from './media/icons/frontend.png'
+import expIcon from './media/icons/exp.png'
+import legitIcon from './media/icons/legit.png'
+import champIcon from './media/icons/champion.png'
 
-import { motion } from 'framer-motion'
-import OussForm from './components/OussForm/OussForm'
+
+
+// images 
+import mypic from './media/images/mypic.png'
 
 
 
@@ -100,7 +108,7 @@ function App() {
                     once: true
                   }}
                   className='hero-car flex-1  font-moderniz flex flex-col items-center'>
-                  <img src="/src/media/icons/champion.png" alt="" width={150} height={150} />
+                  <img src={champIcon} alt="" width={150} height={150} />
                   <h3 className='my-2'> <span className='text-blue-600'>+15</span> PROJECTS</h3>
                 </motion.div>
 
@@ -123,8 +131,8 @@ function App() {
                   viewport={{
                     once: true
                   }}
-                  className='hero-card flex-1  font-moderniz flex flex-col items-center  text-4xl'>
-                  <img src="/src/media/icons/legit.png" alt="" width={250} height={250} />
+                  className='hero-card flex-1 font-moderniz flex flex-col items-center  text-4xl'>
+                  <img src={ legitIcon} alt="" width={250} height={250} />
                   <h3 className='my-2'> <span className='text-green-600'>85%</span>  Client <br />Satisfaction</h3>
                 </motion.div>
 
@@ -148,7 +156,7 @@ function App() {
                     once: true
                   }}
                   className='hero-card flex-1 font-moderniz flex flex-col items-center '>
-                  <img src="/src/media/icons/exp.png" alt="" width={150} height={150} />
+                  <img src={expIcon} alt="" width={150} height={150} />
                   <h3 className='my-2'> <span className='text-red-600'>+7 Y</span> Of Experience </h3>
                 </motion.div>
 
@@ -217,7 +225,7 @@ function App() {
                   ease: 'easeInOut',
                 }}
                 className='ouss-about-cotent-picture flex-1 flex justify-end'>
-                <img src="src/media/images/mypic.png" alt="" width={600} />
+                <img src={mypic} alt="" width={600} />
               </motion.div>
 
             </div>
