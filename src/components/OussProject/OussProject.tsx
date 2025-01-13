@@ -17,9 +17,9 @@ import click2secure2 from '../../media/images/click2secure2.jpg'
 import click2secure3 from '../../media/images/click2secure3.jpg'
 
 
-import british_school1 from '../../media/images/galaxybenef1.jpg'
-import british_school2 from '../../media/images/galaxybenef2.jpg'
-import british_school3 from '../../media/images/galaxybenef3.jpg'
+import british_school1 from '../../media/images/british school app1.jpg'
+import british_school2 from '../../media/images/british school app2.jpg'
+import british_school3 from '../../media/images/british school app3.jpg'
 
 
 import cimaflix1 from '../../media/images/cimaflix1.jpg'
