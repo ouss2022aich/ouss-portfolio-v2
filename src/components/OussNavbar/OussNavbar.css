@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* 
+
+.ouss-nav-item {
+    @apply relative block;
+  }
+  
+  .ouss-nav-item::before {
+    content: '';
+    @apply absolute -bottom-3 left-0 h-0.5 w-full scale-x-0 bg-white origin-right duration-300 ease-in-out;
+  }
+  
+  .ouss-nav-item:hover::before {
+    @apply scale-100;
+    transform-origin: left;
+  }
+This is a single-line comment */

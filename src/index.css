@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  scroll-behavior: smooth;
+  width: 100vw;
+}
+
+
+
+@font-face {
+    font-family: 'zen-dots';
+    src: url('/src/fonts/ZenDots-Regular.ttf') format('truetype');
+    font-weight: 400; /* Regular */
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'bakbak-one';
+    src: url('/src/fonts/BakbakOne-Regular.ttf') format('truetype');
+    font-weight: 400; /* Regular */
+    font-style: normal;
+  }  
+
+
+  @font-face {
+    font-family: 'karantina';
+    src: url('/src/fonts/Karantina-Regular.ttf') format('truetype');
+    font-weight: 400; /* Regular */
+    font-style: normal;
+  }  
+
+  @font-face {
+    font-family: 'moderniz';
+    src: url('/src/fonts/Moderniz.otf') format('opentype');
+    font-weight: 400; /* Regular */
+    font-style: normal;
+  }  
+
+
+  @font-face {
+    font-family: 'product_sans_reg';
+    src: url('/src/fonts/Product Sans Regular.ttf') format('truetype');
+    font-weight: 400; /* Regular */
+    font-style: normal;
+  }  
+
+
+  @font-face {
+    font-family: 'BigShouldersText';
+    src: url('/src/fonts/BigShouldersText-Regular.ttf') format('truetype');
+    font-weight: 400; /* Regular */
+    font-style: normal;
+  }  
+
+
+  .form-label {
+       @apply text-2xl
+  }
+
+  .form-input {
+    @apply px-4  bg-white ring-1 rounded-xl focus:ring-4 focus:ring-blue-600 transition-all duration-200 outline-none text-lg w-80 invalid:ring-red-400 valid:ring-green-400 min-h-12
+  }
+
+
+  
+  
+
+
+
+  .cursor {
+    z-index : -10;
+     display: block;
+     width: 70px;
+     height: 70px;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%);
+     border-radius: 50%;
+     background: white;
+     pointer-events: none;
+     z-index: 111;
+     border: 1px dashed #fff;
+     transition: all 0.1s ease-out;
+     animation: moveCursor1 .5s infinite alternate;
+     mix-blend-mode : difference;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     
+ }
+
+ 
+ .expand {
+     background: transparent;
+     animation: moveCursor2 .5s forwards;
+     border: 2px solid blue;
+ }
+ 
+ @keyframes moveCursor1 {
+     from {
+         transform: scale(1);
+     }
+ 
+     to {
+         transform: scale(.8);
+     }
+ }
+ 
+ @keyframes moveCursor2 {
+     0% {
+         transform: scale(1);
+     }
+ 
+     50% {
+         transform: scale(2.5);
+     }
+ 
+     100% {
+         transform: scale(1);
+         opacity: 0;
+     }
+ }
+ 
