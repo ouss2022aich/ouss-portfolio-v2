@@ -26,6 +26,9 @@ import champIcon from './media/icons/champion.png'
 // images 
 import mypic from './media/images/mypic.png'
 
+// videos 
+import heroVid from './media/images/test2.mp4'
+
 
 
 function App() {
@@ -65,7 +68,7 @@ function App() {
 
 
           <section className='flex flex-col text-center py-5 gap-5 md:py-20 md:gap-20' >
-            <video className='absolute opacity-20 left-0 top-0 w-[100%] h-[100vh] object-cover' src="/src/media/images/test2.mp4" autoPlay={true} muted loop ></video>
+            <video className='absolute opacity-20 left-0 top-0 w-[100%] h-[100vh] object-cover' src={heroVid} autoPlay={true} muted loop ></video>
 
             <div className='overflow-hidden flex flex-col  gap-20 relative z-50'>
               <motion.h1
