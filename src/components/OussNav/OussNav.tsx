@@ -3,7 +3,7 @@ import OussNavbar from '../../components/OussNavbar/OussNavbar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import resumeDoc from '../../docs/cv_oussama_2024_en.pdf'
+import resumeDoc from '../../docs/cv_oussama_2025_en.pdf'
 
 export default function OussNav() {
 
