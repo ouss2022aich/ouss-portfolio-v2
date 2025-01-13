@@ -46,10 +46,87 @@ import mypic from './media/images/mypic.png'
 
 // videos 
 import heroVid from './media/images/test2.mp4'
+import { DOMElement, useEffect } from 'react'
 
 
 
 function App() {
+
+  useEffect(() => {
+
+
+    window.onload = () => {
+      const cursor : any = document.querySelector('.cursor');
+      const compass = document.getElementById('compass');
+      const hand = document.getElementById('hand');
+      const employee = document.getElementById('employee');
+      const chat = document.getElementById('chat');
+      const profile = document.getElementById('profile');
+      const projects = document.getElementById('projects');
+      const services = document.getElementById('services');
+      const hi = document.getElementById('hi');
+
+      const cursorElements : any[]= [
+        compass,
+        hand,
+        employee,
+        chat,
+        profile,
+        projects,
+        services,
+        hi,
+
+
+      ]
+
+      function setActiveCursorElement(element : any, cursor : any) {
+
+        cursorElements.forEach((cursorElement) => {
+          if (cursorElement === element) {
+            cursorElement.style.display = 'block'
+            cursor.style.width = '120px'
+            cursor.style.height = '120px'
+          } else {
+            cursorElement.style.display = 'none'
+          }
+        })
+
+      }
+
+      document.addEventListener('mousemove', (e : any) => {
+
+        cursor.setAttribute("style", "top: " + (e.pageY - 40) + "px; left: " + (e.pageX - 40) + "px;")
+        if (e.target.classList.contains('project-img')) {
+          setActiveCursorElement(compass, cursor)
+        } else if (e.target.classList.contains('resume-button')) {
+          setActiveCursorElement(employee, cursor)
+        } else if (e.target.classList.contains('logo')) {
+          setActiveCursorElement(hi, cursor)
+        } else if (e.target.classList.contains('ouss-nav-projects')) {
+          setActiveCursorElement(projects, cursor)
+        } else if (e.target.classList.contains('ouss-nav-about')) {
+          setActiveCursorElement(profile, cursor)
+        } else if (e.target.classList.contains('ouss-nav-contact')) {
+          setActiveCursorElement(chat, cursor)
+        } else if (e.target.classList.contains('ouss-nav-services')) {
+          setActiveCursorElement(services, cursor)
+        } else {
+          cursorElements.forEach((cursorElement) => cursorElement.style.display = 'none')
+        }
+
+      })
+
+      document.addEventListener('click', e => {
+        cursor.classList.add("expand");
+        setTimeout(() => {
+          cursor.classList.remove("expand");
+        }, 500);
+      });
+    }
+
+
+  }, [])
+
 
   const parentVariants = {
     hidden: { opacity: 0 },
@@ -364,28 +441,28 @@ function App() {
               </div>
               <div className='footer-footer flex flex-col gap-4 text-gray-800'>
                 <hr className='border-gray-600' />
-                <div className='flex justify-around items-center'>
+                <div className='flex flex-col gap-4 md:flex-row justify-around items-center'>
                   <div className='flex-1'>
                     <p className='text-xl'>Call me : +213 792 333 216</p>
                   </div>
                   <div className='flex justify-end flex-1 gap-6' >
                     <a href="https://www.linkedin.com/in/oussama-aichaoui/">
-                      <img className='hover:scale-110 transition-all duration-150 cursor-pointer' src={linkedinIcon} alt="" width={45} />
+                      <img className='hover:scale-110 transition-all duration-150 cursor-pointer' src={linkedinIcon} alt="" width={40} />
                     </a>
                     <a href="">
-                      <img className='hover:scale-110 transition-all duration-150 cursor-pointer' src={fiverrIcon} alt="" width={45} />
+                      <img className='hover:scale-110 transition-all duration-150 cursor-pointer' src={fiverrIcon} alt="" width={40} />
                     </a>
                     <a href="mailto:ouss.aich2022@gmail.com">
-                      <img className='hover:scale-110 transition-all duration-150 cursor-pointer' src={gmailIcon} alt="" width={45} />
+                      <img className='hover:scale-110 transition-all duration-150 cursor-pointer' src={gmailIcon} alt="" width={40} />
                     </a>
                     <a href="https://wa.me/213792333216">
-                      <img className='hover:scale-110 transition-all duration-150 cursor-pointer' src={whatsappIcon} alt="" width={45} />
+                      <img className='hover:scale-110 transition-all duration-150 cursor-pointer' src={whatsappIcon} alt="" width={40} />
                     </a>
                     <a href="https://t.me/+213792333216">
-                      <img className='hover:scale-110 transition-all duration-150 cursor-pointer' src={telegramIcon} alt="" width={45} />
+                      <img className='hover:scale-110 transition-all duration-150 cursor-pointer' src={telegramIcon} alt="" width={40} />
                     </a>
                     <a href="https://github.com/ouss2022aich">
-                      <img className='hover:scale-110 transition-all duration-150 cursor-pointer' src={githubIcon} alt="" width={45} />
+                      <img className='hover:scale-110 transition-all duration-150 cursor-pointer' src={githubIcon} alt="" width={40} />
                     </a>
                   </div>
 
