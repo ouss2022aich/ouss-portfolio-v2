@@ -30,6 +30,7 @@ import projectsIcon from './media/icons/projects.png'
 import servicesIcon from './media/icons/services.png'
 import hiIcon from './media/icons/hi.gif'
 
+import discordIcon from './media/icons/discord.png'
 
 import linkedinIcon from './media/icons/linkedin.png'
 import fiverrIcon from './media/icons/fiverr.png'
@@ -463,6 +464,9 @@ function App() {
                     </a>
                     <a href="https://github.com/ouss2022aich">
                       <img className='hover:scale-110 transition-all duration-150 cursor-pointer' src={githubIcon} alt="" width={40} />
+                    </a>
+                    <a href="https://discord.com/users/694931992382537760">
+                      <img className='hover:scale-110 transition-all duration-150 cursor-pointer' src={discordIcon} alt="" width={40} />
                     </a>
                   </div>
 
