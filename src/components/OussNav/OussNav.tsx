@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import resumeDoc from '../../docs/cv_oussama_2025_en.pdf'
+import ousslogoIcon from '../../media/icons/ouss_logo.png'
 
 export default function OussNav() {
 
@@ -24,7 +25,7 @@ export default function OussNav() {
       }}
     >
       <nav className='header py-4 px-4 flex justify-between items-center relative backdrop-blur-md rounded-3xl' style={{ zIndex: 99 }}>
-        <a href="" className='flex-1'><div title='Ouss Coding' id='logo' className='cursor-pointer logo font-zendots text-3xl flex-1'>O<span className='m-0 p-0 text-green-400'>C</span> </div>
+        <a href="" className='flex-1'><img src={ousslogoIcon} width={50} height={50} title='Ouss Coding' id='logo' className='cursor-pointer logo font-zendots text-3xl flex-1 hover:animate-spin' />
         </a>
         <OussNavbar items={[
           { content: 'about', link: '', icon: null },
