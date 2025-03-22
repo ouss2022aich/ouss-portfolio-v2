@@ -333,6 +333,31 @@ function App() {
 
 
           <OussSection direction='v' title='projects' className='gap-5'>
+
+          <OussProject
+              company='BARGME.'
+              position='Bakend Developer'
+              employment='freelance'
+              from={new Date('2024-01-20')}
+              to={new Date('2025-03-20')}
+              name='MyDa – Food Delivery App'
+              bg_from='#1D976C'
+              bg_to='#93F9B9'
+              descParagraphs={
+                [
+                  "MyDa is a food delivery platform designed to connect consumers, home-based chefs, and professional food providers with drivers for a seamless ordering and delivery experience. Consumers can explore a variety of food options, place orders, and track their deliveries in real time. Meanwhile, chefs and small food businesses can manage their offerings, receive orders, and coordinate deliveries effortlessly.",
+
+
+                  "The app integrates Google Maps API for real-time tracking and optimized routing, ensuring fast and efficient deliveries. The backend, built with Laravel, provides scalability, high performance, and smooth communication between users. While another developer on the team handled the front end, I contributed to its development alongside my primary backend responsibilities.",
+
+                  "The project was successfully delivered, and the client was highly satisfied with the final product, praising its functionality, reliability, and smooth user experience.",
+                  
+                ]
+
+              }
+              techs={['php', 'laravel', 'mysql', 'api', 'docker', 'github', 'react']}
+            />
+
             <OussProject
               company='EURL Payd.'
               position='Full Stack Developer'

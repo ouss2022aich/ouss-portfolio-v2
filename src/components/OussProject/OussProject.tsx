@@ -26,6 +26,12 @@ import cimaflix1 from '../../media/images/cimaflix1.jpg'
 import cimaflix2 from '../../media/images/cimaflix2.jpg'
 import cimaflix3 from '../../media/images/cimaflix3.jpg'
 
+import myda_1 from '../../media/images/myda_1.jpg'
+import myda_2 from '../../media/images/myda_2.jpg'
+import myda_3 from '../../media/images/myda_3.jpg'
+import myda_4 from '../../media/images/myda_4.jpg'
+import myda_5 from '../../media/images/myda_5.jpg'
+
 const projectImgGroup = [
 
      {
@@ -50,7 +56,13 @@ const projectImgGroup = [
         name : 'british school app',
         images : [
             british_school1,british_school2,british_school3
-        ]
+        ],
+     },
+     {
+        name : 'MyDa – Food Delivery App',
+        images : [
+            myda_1,myda_2,myda_3,myda_4,myda_5
+        ],
      },
 
 
@@ -211,13 +223,13 @@ const OussProject: React.FC<OussProjectProps> = ({ name, descParagraphs, from, t
 
                 </motion.div>
 
-                <div className="flex-1 flex flex-col justify-center items-center gap-6 peer relative z-20 group">
+                <div className="flex-1 flex flex-col justify-center items-center gap-6 peer relative z-20 group  grid grid-cols-2 grid-row-2">
 
                     {
                         Array(3).fill(0).map((el, i) => {
                             return (
                                 <Tilt key={i} data-el={el} glareEnable={true} glareColor={bg_from} glareMaxOpacity={0.5} >
-                                    <img onClick={() => setModalImg( projectImages[i] ) } src={projectImages[i] } className="project-img peer cursor-pointer rounded-2xl  transition-all duration-200 blur-sm  group-hover:blur-0 hover:scale-125 hover:z-[99] relative" alt="" width={500} />
+                                    <img onClick={() => setModalImg( projectImages[i] ) } src={projectImages[i] } className="project-img peer cursor-pointer rounded-2xl  transition-all duration-200 blur-sm  group-hover:blur-0 hover:scale-125 hover:z-[99] relative max-h-96 bg-contain object-contain" alt="" width={500} />
                                 </Tilt>)
                         })
                     }
