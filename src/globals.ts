@@ -17,6 +17,10 @@ import nginxIcon from '../src/media/icons/nginx.png'
 import apacheIcon from '../src/media/icons/apache.png'
 import tailwindIcon from '../src/media/icons/tailwind.png'
 
+import nestJSIcon from '../src/media/icons/nestjs.svg'
+import postgresIcon from '../src/media/icons/postgres.webp'
+import githubActionsIcon from '../src/media/icons/github_actions.svg'
+
 
 export const icons : { [key : string] : any } = {
     html  :  { icon : htmlIcon, name : 'HTML'  },
@@ -35,6 +39,9 @@ export const icons : { [key : string] : any } = {
     apache : { icon : apacheIcon, name : 'Apache' },
     docker : { icon : dockerIcon , name : 'Docker'},
     nginx : { icon : nginxIcon, name : 'NGinx' },
-    tailwind : { icon : tailwindIcon, name : 'Tailwind - Css' }
+    tailwind : { icon : tailwindIcon, name : 'Tailwind - Css' },
+    postgres : { icon : postgresIcon, name : 'PostgresSQL' },
+    nestJS : { icon : nestJSIcon, name : 'NestJS' },
+    githubActions : { icon : githubActionsIcon, name : 'Github Actions' },
 }
 

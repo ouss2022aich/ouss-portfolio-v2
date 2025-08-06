@@ -6,7 +6,7 @@ import arrowDown from '/src/media/icons/arrow-down.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons"
 
-// projects images 
+// projects images
 import galaxybenef1 from '../../media/images/galaxybenef1.jpg'
 import galaxybenef2 from '../../media/images/galaxybenef2.jpg'
 import galaxybenef3 from '../../media/images/galaxybenef3.jpg'
@@ -31,6 +31,12 @@ import myda_2 from '../../media/images/myda_2.jpg'
 import myda_3 from '../../media/images/myda_3.jpg'
 import myda_4 from '../../media/images/myda_4.jpg'
 import myda_5 from '../../media/images/myda_5.jpg'
+
+import hirinii_1 from '../../media/images/hirinii_1.webp'
+import hirinii_2 from '../../media/images/hirinii_2.webp'
+import hirinii_3 from '../../media/images/hirinii_3.webp'
+
+
 
 const projectImgGroup = [
 
@@ -64,23 +70,26 @@ const projectImgGroup = [
             myda_1,myda_2,myda_3,myda_4,myda_5
         ],
      },
+    {
+        name : 'Hirinii',
+        images : [
+           hirinii_1,hirinii_2,hirinii_3,
+        ],
+    },
 
 
 ]
 
 
-const formatDate = (date: Date) => {
+const formatDate = (date: Date | null, isCurrent = false): string => {
+    if (!date || isCurrent) return "Present";
 
-
-    // Extract day, month, and year
     const day = date.getDate();
-    const month = date.toLocaleString('default', { month: 'short' }); // e.g., "Aug"
+    const month = date.toLocaleString('default', { month: 'short' });
     const year = date.getFullYear();
 
-    // Format the date
     return `${day} ${month} ${year}`;
 };
-
 
 export type OussProjectProps = {
     name: string,
@@ -90,16 +99,18 @@ export type OussProjectProps = {
     employment: 'on-site' | 'freelance' | 'hybrid' | 'remote',
     company: string,
     from: Date,
-    to: Date,
+    to: Date|null,
     descParagraphs: string[],
     techs: string[],
-    textColor?: 'black' | 'white'
+    textColor?: 'black' | 'white',
+    current?: boolean,
 }
 
-const OussProject: React.FC<OussProjectProps> = ({ name, descParagraphs, from, to, bg_from, bg_to, techs, position, company, employment, textColor = 'white' }) => {
+const OussProject: React.FC<OussProjectProps> = ({ name, descParagraphs, from, to, bg_from, bg_to, techs, position, company, employment, textColor = 'white' , current=false }) => {
 
     const [expand, setExpand] = useState(false)
     const [modalImg, setModalImg] = useState('')
+
 
     const projectImages : any = projectImgGroup.find( (el) => el.name === name )?.images
 
@@ -146,7 +157,7 @@ const OussProject: React.FC<OussProjectProps> = ({ name, descParagraphs, from, t
                 <h1 className="text-white text-right text-sm md:text-xl flex-1">
                     From {from.getFullYear()}
                     <br />
-                    To {to.getFullYear()}
+                    To {(current) ? <span className='text-black'>Present</span> : to?.getFullYear()}
                 </h1>
 
             </div>
@@ -167,7 +178,7 @@ const OussProject: React.FC<OussProjectProps> = ({ name, descParagraphs, from, t
                         </div>
                         <div className="flex justify-between">
 
-                            <p><span className="font-bold"> to : </span> <span> {formatDate(to)} </span></p>
+                            <p><span className="font-bold"> to : </span> <span> {formatDate(to,current)} </span></p>
                         </div>
 
 
